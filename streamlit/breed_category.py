@@ -16,7 +16,8 @@ if uploaded_file is not None:
 
     # Load and use the FastAI model
     try:
-        model = load_learner("model.pkl")  # Replace with your model path
+        # Replace with your model path
+        model = load_learner("models/breed_categories.pkl")
         img = PILImage.create(uploaded_file)
         # `idx` contains the index of the predicted category
         prediction, idx, probs = model.predict(img)
